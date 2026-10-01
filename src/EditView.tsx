@@ -164,7 +164,7 @@ export function EditView({ photos, initialFrame, onBack }: Props) {
       const canvas = composeFinalImage(frame, photoMap, overlayImg, activeFilterCss);
       const blob = await canvasToJpgBlob(canvas, 0.95);
       const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-      downloadBlob(blob, `파천네컷_${date}.jpg`);
+      downloadBlob(blob, `학교네컷_${date}.jpg`);
       setSaved(true);
       setTimeout(() => setSaved(false), 3000);
     } catch {
